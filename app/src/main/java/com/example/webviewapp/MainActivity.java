@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showInternalWebPage(){
-        myWebView.loadUrl("file:///assets/page.html");
+        myWebView.loadUrl("file:///android_asset/page.html");
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         myWebView = findViewById(R.id.my_webview);
         myWebView.getSettings().setJavaScriptEnabled(true);
+        myWebView.getSettings().setAllowFileAccess(true);
         myWebView.setWebViewClient(new WebViewClient());
         /*
         * Rename your App. Tip: Values->Strings
